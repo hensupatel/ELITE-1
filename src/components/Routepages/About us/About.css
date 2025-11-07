@@ -1,0 +1,759 @@
+/* =======================
+   PAGE HEADER SECTION
+======================= */
+
+.page-header-section {
+  height: 395px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.page-header-section img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.page-header-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.container69 {
+  position: relative;
+  z-index: 5;
+  padding-left: 100px;
+}
+
+.header-title69 {
+  font-size: 70px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.header-title69 span {
+  color: #569dff;
+}
+
+/* =======================
+   INTRO SECTION
+======================= */
+
+.spad {
+  padding: 100px 0;
+}
+
+.intro-section {
+  background: #fff;
+}
+
+.intro-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #000;
+  line-height: 1.3;
+}
+
+.intro-text h1 span {
+  background-color: #569dff;
+  padding: 0 10px;
+  display: inline-block;
+}
+
+.intro-text p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.intro-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* =======================
+   TESTIMONIALS SECTION
+======================= */
+
+.testimonials-section {
+  position: relative;
+  background: #f8f9fa;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.testimonials-image-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 45%;
+  height: 100%;
+  background: url("../../assets/img/testimonial-bg.jpg") center/cover no-repeat;
+  z-index: 1;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  padding: 80px 0;
+}
+
+.cta-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.cta-content h1 span {
+  background-color: #569dff;
+  color: #000;
+  padding: 0 10px;
+  display: inline-block;
+}
+
+.qut {
+  font-size: 120px;
+  line-height: 0.5;
+  color: #569dff;
+  margin-bottom: 30px;
+  font-family: Georgia, serif;
+}
+
+.testimonials-slider .ts-item {
+  margin-bottom: 40px;
+}
+
+.testimonials-slider p {
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.testimonials-slider h4 {
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.testimonials-slider span {
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* =======================
+   TEAM SECTION
+======================= */
+
+.team-section {
+  background: #fff;
+}
+
+.section-title {
+  display: inline-block;
+  background: #569dff;
+  padding: 0 20px;
+  margin-bottom: 90px;
+  font-size: 60px;
+  border-radius: 10px;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.row-1 {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  position: relative;
+  width: 270px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.team-member img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+.team-member:hover img {
+  transform: scale(1.05);
+}
+
+.member-info {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  background: #fff;
+  width: 85%;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 5px 5px 5px rgba(114, 114, 114, 0.21);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.member-info h1 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.member-info p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.team-member:hover .member-info {
+  background: #569dff;
+  color: #fff;
+}
+
+.team-member:hover .member-info h1,
+.team-member:hover .member-info p {
+  color: #fff;
+}
+
+/* =======================
+   PROMO SECTION
+======================= */
+
+.promo-section {
+  color: #fff;
+  padding: 80px 0;
+  background-image: url("../../../assets/img/header-bg-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.promo-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.promo-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.promo-text h1 {
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.promo-text h1 span {
+  color: #1d1c1c;
+  background-color: #569dff;
+  padding: 0 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.promo-text p {
+  font-size: 18px;
+  opacity: 0.9;
+  color: #f0f0f0;
+  margin: 0;
+}
+
+.text-lg-right {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* =======================
+   RESPONSIVE BREAKPOINTS
+======================= */
+
+/* ----------- Large Screens (1400px and down) ----------- */
+@media (max-width: 1400px) {
+  .container69 {
+    padding-left: 80px;
+  }
+
+  .header-title69 {
+    font-size: 65px;
+  }
+
+  .section-title {
+    font-size: 55px;
+    margin-bottom: 80px;
+  }
+
+  .row-1 {
+    gap: 60px;
+  }
+
+  .promo-text h1 {
+    font-size: 54px;
+  }
+}
+
+/* ----------- Medium-Large Screens (1200px and down) ----------- */
+@media (max-width: 1199px) {
+  .page-header-section {
+    height: 350px;
+  }
+
+  .container69 {
+    padding-left: 60px;
+  }
+
+  .header-title69 {
+    font-size: 60px;
+  }
+
+  .intro-text h1 {
+    font-size: 42px;
+  }
+
+  .cta-content h1 {
+    font-size: 42px;
+  }
+
+  .qut {
+    font-size: 100px;
+  }
+
+  .section-title {
+    font-size: 50px;
+    margin-bottom: 70px;
+  }
+
+  .row-1 {
+    gap: 50px;
+  }
+
+  .team-member {
+    width: 250px;
+    height: 370px;
+  }
+
+  .promo-text h1 {
+    font-size: 48px;
+  }
+}
+
+/* ----------- Tablets (768px–991px) ----------- */
+@media (min-width: 768px) and (max-width: 991px) {
+  .page-header-section {
+    height: 300px;
+  }
+
+  .container69 {
+    padding-left: 40px;
+  }
+
+  .header-title69 {
+    font-size: 50px;
+  }
+
+  .spad {
+    padding: 80px 0;
+  }
+
+  .intro-text h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .intro-text {
+    margin-bottom: 40px;
+  }
+
+  .intro-image {
+    text-align: center;
+  }
+
+  .intro-image img {
+    max-width: 80%;
+  }
+
+  .testimonials-image-box {
+    display: none;
+  }
+
+  .cta-content {
+    padding: 60px 40px;
+  }
+
+  .cta-content h1 {
+    font-size: 36px;
+  }
+
+  .qut {
+    font-size: 80px;
+  }
+
+  .testimonials-slider p {
+    font-size: 15px;
+  }
+
+  .section-title {
+    font-size: 45px;
+    margin-bottom: 60px;
+  }
+
+  .row-1 {
+    gap: 40px;
+  }
+
+  .team-member {
+    width: 230px;
+    height: 340px;
+  }
+
+  .promo-section {
+    padding: 60px 0;
+  }
+
+  .promo-text h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .promo-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .text-lg-right {
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+}
+
+/* ----------- Mobile (max-width: 767px) ----------- */
+@media (max-width: 767px) {
+  .page-header-section {
+    height: 250px;
+  }
+
+  .container69 {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .header-title69 {
+    font-size: 40px;
+  }
+
+  .spad {
+    padding: 60px 0;
+  }
+
+  .intro-text h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .intro-text h1 span {
+    padding: 0 8px;
+  }
+
+  .intro-text p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .intro-text {
+    margin-bottom: 30px;
+  }
+
+  .intro-image {
+    text-align: center;
+  }
+
+  .intro-image img {
+    max-width: 90%;
+  }
+
+  /* Testimonials */
+  .testimonials-section {
+    min-height: auto;
+  }
+
+  .testimonials-image-box {
+    display: none;
+  }
+
+  .cta-section .container1 {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .cta-content {
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .cta-content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .qut {
+    font-size: 70px;
+    margin-bottom: 20px;
+  }
+
+  .testimonials-slider p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .testimonials-slider h4 {
+    font-size: 18px;
+  }
+
+  .testimonials-slider span {
+    font-size: 13px;
+  }
+
+  /* Team Section */
+  .section-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+    display: block;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .row-1 {
+    gap: 30px;
+  }
+
+  .team-member {
+    width: 100%;
+    max-width: 300px;
+    height: 380px;
+  }
+
+  /* Promo Section */
+  .promo-section {
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .promo-text h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  .promo-text h1 span {
+    padding: 0 8px;
+  }
+
+  .promo-text p {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+
+  .text-lg-right {
+    justify-content: center;
+    margin-top: 0;
+  }
+}
+
+/* ----------- Small Mobile (max-width: 479px) ----------- */
+@media (max-width: 479px) {
+  .page-header-section {
+    height: 250px;
+    left: 0px;
+    width: 430px;
+    top: -96px;
+  }
+
+  .container69 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .header-title69 {
+    font-size: 34px;
+  }
+
+  .spad {
+    padding: 50px 0;
+  }
+
+  .intro-text h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .intro-text h1 span {
+    padding: 0 6px;
+  }
+
+  .intro-text p {
+    font-size: 14px;
+  }
+
+  .intro-image img {
+    max-width: 100%;
+  }
+
+  .cta-content {
+    padding: 40px 15px;
+  }
+
+  .cta-content h1 {
+    font-size: 28px;
+  }
+
+  .cta-content h1 span {
+    padding: 0 6px;
+  }
+
+  .qut {
+    font-size: 60px;
+  }
+
+  .testimonials-slider p {
+    font-size: 13px;
+  }
+
+  .section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+    padding: 0 12px;
+  }
+
+  .row-1 {
+    gap: 25px;
+  }
+
+  .team-member {
+    max-width: 280px;
+    height: 360px;
+  }
+
+  .member-info h1 {
+    font-size: 18px;
+  }
+
+  .member-info p {
+    font-size: 13px;
+  }
+
+  .promo-section {
+    padding: 40px 0;
+  }
+
+  .promo-text h1 {
+    font-size: 28px;
+  }
+
+  .promo-text p {
+    font-size: 14px;
+  }
+}
+
+/* ----------- Extra Small Mobile (max-width: 360px) ----------- */
+@media (max-width: 360px) {
+  .page-header-section {
+    height: 200px;
+  }
+
+  .header-title69 {
+    font-size: 30px;
+  }
+
+  .spad {
+    padding: 40px 0;
+  }
+
+  .intro-text h1 {
+    font-size: 24px;
+  }
+
+  .intro-text p {
+    font-size: 13px;
+  }
+
+  .cta-content {
+    padding: 35px 10px;
+  }
+
+  .cta-content h1 {
+    font-size: 24px;
+  }
+
+  .qut {
+    font-size: 50px;
+  }
+
+  .testimonials-slider p {
+    font-size: 12px;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 35px;
+  }
+
+  .team-member {
+    max-width: 260px;
+    height: 340px;
+  }
+
+  .promo-text h1 {
+    font-size: 24px;
+  }
+
+  .promo-text p {
+    font-size: 13px;
+  }
+}

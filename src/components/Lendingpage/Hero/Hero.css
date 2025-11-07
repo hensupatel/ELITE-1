@@ -1,0 +1,343 @@
+/* =======================
+   HERO SECTION BASE STYLES
+======================= */
+.hero-section {
+  height: 960px;
+  background: #3cedf0;
+  position: relative;
+}
+
+.left-bar {
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background: #121212;
+  z-index: 20;
+}
+
+.left-bar .left-bar-content {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.social-links a {
+  display: block;
+  color: #838383;
+  margin-bottom: 20px;
+  font-size: 20px;
+  transition: all 0.4s;
+}
+
+.social-links a:hover {
+  color: #569dff;
+}
+
+.hero-right-text {
+  position: absolute;
+  right: 140px;
+  transform: rotate(-90deg);
+  transform-origin: right center;
+  bottom: 60%;
+  z-index: 30;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+}
+
+.hero-slider .hero-slide-item {
+  width: 100%;
+  height: 960px;
+  display: table;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-slider,
+.hero-slide-item,
+.slide-inner {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+}
+
+.slide-content {
+  margin-left: 350px;
+  margin-bottom: 50px;
+  padding-left: 190px;
+  padding-top: 170px;
+  padding-bottom: 70px;
+  position: relative;
+  opacity: 0;
+  transition: all 0.6s;
+}
+
+.slide-content::after {
+  position: absolute;
+  content: "";
+  height: 590px;
+  width: 323px;
+  border-top: 150px solid #0068f8;
+  border-left: 150px solid #0068f8;
+  border-bottom: 90px solid #0068f8;
+  top: 0;
+  left: 0;
+  opacity: 0.73;
+}
+
+.slide-content h2 {
+  color: #f4f0f0;
+  font-size: 80px;
+  line-height: 80px;
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+.owl-item.active,
+.slide-content {
+  opacity: 1;
+}
+
+.site-btn {
+  display: inline-block;
+  font-weight: 700;
+  border: 4px solid;
+  min-width: 200px;
+  text-align: center;
+  padding: 19px 0;
+  position: relative;
+  background-color: transparent;
+  margin-right: 15px;
+  z-index: 1;
+}
+
+.slide-num-holder {
+  width: 153px;
+  height: 250px;
+  position: absolute;
+  right: 60px;
+  background: rgb(0, 0, 0);
+  bottom: -121px;
+  z-index: 111;
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 60px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.slide-num-holder img {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  right: 0;
+  left: 0;
+}
+
+.site-btn.sb-light:after,
+.site-btn.sb-light:before {
+  background: #fff;
+}
+
+.site-btn:before {
+  bottom: 18px;
+}
+
+.site-btn:after {
+  bottom: 8px;
+}
+
+.site-btn:after,
+.site-btn:before {
+  position: absolute;
+  content: "";
+  width: 26px;
+  height: 4px;
+  right: -15px;
+}
+
+.video-bg {
+  position: relative;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.slide-inner,
+.slide-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* =======================
+   RESPONSIVE DESIGN
+======================= */
+
+/* --- XL Screen (max-width: 1477px) --- */
+@media only screen and (max-width: 1477px) {
+  .hero-right-text {
+    right: 100px;
+  }
+}
+
+/* --- Large Screen (max-width: 1400px) --- */
+@media only screen and (max-width: 1400px) {
+  .slide-content {
+    margin-left: 300px;
+    padding-left: 160px;
+  }
+  .slide-content h2 {
+    font-size: 70px;
+    line-height: 70px;
+  }
+}
+
+/* --- Medium (992px–1199px) --- */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .slide-content {
+    margin-left: 220px;
+    padding-left: 130px;
+    padding-top: 140px;
+  }
+  .slide-content::after {
+    border-top: 120px solid #0068f8;
+    border-left: 120px solid #0068f8;
+    border-bottom: 80px solid #0068f8;
+  }
+  .slide-content h2 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .hero-section,
+  .hero-slider .hero-slide-item {
+    height: 850px;
+  }
+  .slide-num-holder {
+    right: 20px;
+  }
+  .hero-right-text {
+    right: 90px;
+    letter-spacing: 15px;
+  }
+}
+
+/* --- Tablet (768px–991px) --- */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .slide-content {
+    margin-left: 170px;
+    padding-left: 100px;
+    padding-top: 120px;
+    padding-bottom: 30px;
+  }
+
+  .slide-content h2 {
+    font-size: 50px;
+    line-height: 55px;
+  }
+
+  .slide-content::after {
+    border-top: 100px solid #0068f8;
+    border-left: 100px solid #0068f8;
+    border-bottom: 60px solid #0068f8;
+  }
+
+  .hero-section,
+  .hero-slider .hero-slide-item {
+    height: 750px;
+  }
+
+  .hero-right-text {
+    right: 80px;
+    bottom: 70%;
+    letter-spacing: 12px;
+  }
+
+  .slide-num-holder {
+    right: 15px;
+  }
+}
+
+/* --- Large Mobile (max-width: 767px) --- */
+@media only screen and (max-width: 767px) {
+  .hero-section,
+  .hero-slider .hero-slide-item {
+    height: auto;
+    padding: 150px 0;
+  }
+
+  .left-bar {
+    width: 70px;
+  }
+
+  .slide-content {
+    margin-left: 70px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .slide-content::after,
+  .hero-right-text {
+    display: none;
+  }
+
+  .slide-content h2 {
+    font-size: 45px;
+    line-height: 1.3;
+  }
+
+  .slide-num-holder {
+    right: 0;
+    height: 75px;
+    width: 136px;
+    padding-top: 18px;
+    bottom: -135px;
+  }
+
+  .slide-num-holder span {
+    font-size: 40px;
+  }
+
+  .social-links a {
+    font-size: 18px;
+  }
+}
+
+/* --- Small Mobile (max-width: 479px) --- */
+@media only screen and (max-width: 479px) {
+  .left-bar {
+    display: none;
+  }
+
+  .hero-section {
+    height: auto;
+    background: #3cedf0;
+  }
+
+  .slide-content {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .slide-content h2 {
+    font-size: 35px;
+    line-height: 1.4;
+  }
+
+  .slide-num-holder {
+    display: none;
+  }
+
+  .site-btn {
+    min-width: 160px;
+    padding: 15px 0;
+  }
+}

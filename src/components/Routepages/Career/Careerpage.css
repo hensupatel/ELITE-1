@@ -1,0 +1,375 @@
+/* ==========================
+   PAGE HEADER SECTION
+========================== */
+.page-header-section {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-header-section img.header-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.4);
+}
+
+.container69 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  text-align: left;
+  width: 100%;
+}
+
+.header-title69 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.header-title69 span {
+  color: #569dff;
+}
+
+/* ==========================
+   JOB LIST SECTION
+========================== */
+.job-list-section {
+  padding: 100px 0;
+  background-color: #f9f9f9;
+}
+
+.job-list-container {
+  padding: 0 15px;
+}
+
+.job-list-container h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #222;
+}
+
+.job-openings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* --- Job Card --- */
+.job-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 25px 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  width: 360px;
+  max-width: 100%;
+}
+
+.job-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.job-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.job-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.job-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.apply-btn {
+  background-color: #569dff;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.apply-btn:hover {
+  background-color: #3a8dff;
+}
+
+/* ==========================
+   APPLICATION FORM MODAL
+========================== */
+.form-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.form-modal-content {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  z-index: 1001;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.form-modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2rem;
+  color: #888;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea,
+.form-group input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-group input[type="file"] {
+  padding: 5px;
+  font-size: 0.9rem;
+}
+
+.form-modal-content button[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+}
+
+.form-modal-content button[type="submit"]:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.submit-message {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.submit-message.success {
+  color: green;
+}
+.submit-message.error {
+  color: red;
+}
+
+/* ==========================
+   RESPONSIVE BREAKPOINTS
+========================== */
+
+/* --- Large Screens (max-width: 1477px) --- */
+@media only screen and (max-width: 1477px) {
+  .header-title69 {
+    font-size: 4.5rem;
+  }
+}
+
+/* --- Large Devices (max-width: 1400px) --- */
+@media only screen and (max-width: 1400px) {
+  .job-list-section {
+    padding: 90px 0;
+  }
+  .job-card {
+    width: 340px;
+  }
+}
+
+/* --- Medium Screens (992px–1199px) --- */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .header-title69 {
+    font-size: 4rem;
+  }
+  .job-list-section {
+    padding: 80px 0;
+  }
+  .job-card {
+    width: 320px;
+  }
+}
+
+/* --- Tablets (768px–991px) --- */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .header-title69 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .job-list-section {
+    padding: 70px 0;
+  }
+
+  .job-list-container h2 {
+    font-size: 2.2rem;
+  }
+
+  .job-card {
+    width: 100%;
+    max-width: 480px;
+    padding: 25px;
+  }
+
+  .form-modal-content {
+    padding: 25px;
+  }
+}
+
+/* --- Large Mobile (max-width: 767px) --- */
+@media only screen and (max-width: 767px) {
+  .page-header-section {
+    height: 300px;
+    text-align: center;
+  }
+
+  .header-title69 {
+    font-size: 2.8rem;
+  }
+
+  .job-list-section {
+    padding: 60px 20px;
+  }
+
+  .job-list-container h2 {
+    font-size: 2rem;
+  }
+
+  .job-openings {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .job-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .apply-btn {
+    width: 100%;
+  }
+
+  .form-modal-content {
+    padding: 20px;
+  }
+}
+
+/* --- Small Mobile (max-width: 479px) --- */
+@media only screen and (max-width: 479px) {
+  .page-header-section {
+    height: 250px;
+  }
+
+  .header-title69 {
+    font-size: 2rem;
+  }
+
+  .job-list-section {
+    padding: 50px 15px;
+  }
+
+  .job-card {
+    width: 100%;
+    padding: 18px;
+  }
+
+  .job-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .apply-btn {
+    font-size: 0.85rem;
+    padding: 10px 20px;
+  }
+
+  .form-modal-content {
+    padding: 18px;
+  }
+
+  .form-modal-content h2 {
+    font-size: 1.4rem;
+  }
+}

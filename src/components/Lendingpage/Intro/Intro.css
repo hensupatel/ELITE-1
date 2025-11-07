@@ -1,0 +1,324 @@
+/* =======================
+   INTRO SECTION STYLES
+======================= */
+.intro-section {
+  position: relative;
+  padding: 120px 0;
+}
+
+.intro-text p {
+  margin-bottom: 50px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.sp-title {
+  font-size: 60px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #121212;
+  line-height: 1.2;
+}
+
+.sp-title span {
+  background: #569dff;
+  padding: 0 10px;
+  color: #222222;
+  display: inline-block;
+}
+
+/* site-btn sb-dark */
+.site-btn.sb-dark {
+  color: #ffffff;
+}
+.site-btn.sb-dark:after,
+.site-btn.sb-dark:before {
+  background: #ffffff;
+}
+
+/* =======================
+   RESPONSIVE BREAKPOINTS
+======================= */
+
+/* ----------- Large Screens (1477px and down) ----------- */
+@media (max-width: 1477px) {
+  .intro-section {
+    padding: 100px 0;
+  }
+  .sp-title {
+    font-size: 55px;
+  }
+}
+
+/* ----------- Medium-Large Screens (1400px and down) ----------- */
+@media (max-width: 1400px) {
+  .sp-title {
+    font-size: 50px;
+  }
+  .intro-text p {
+    font-size: 17px;
+  }
+}
+
+/* ----------- Laptops / Small Desktops (992px–1199px) ----------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .intro-section {
+    padding: 80px 0;
+  }
+  .sp-title {
+    font-size: 45px;
+  }
+  .intro-text p {
+    margin-bottom: 40px;
+  }
+}
+
+/* ----------- Tablets (768px–991px) ----------- */
+@media (min-width: 768px) and (max-width: 991px) {
+  .intro-section {
+    padding: 70px 0;
+  }
+  .sp-title {
+    font-size: 38px;
+    margin-bottom: 30px;
+  }
+  .intro-text p {
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
+}
+
+/* ----------- Mobile (max-width: 767px) ----------- */
+@media (max-width: 767px) {
+  .intro-section {
+    padding: 60px 20px;
+    text-align: center;
+  } /* =======================
+   INTRO SECTION STYLES
+======================= */
+  .intro-section {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+  }
+
+  .intro-text p {
+    margin-bottom: 50px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+  }
+
+  .sp-title {
+    font-size: 60px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #121212;
+    line-height: 1.2;
+  }
+
+  .sp-title span {
+    background: #569dff;
+    padding: 0 10px;
+    color: #222222;
+    display: inline-block;
+  }
+
+  /* Image responsive container */
+  .intro-section .col-lg-5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .intro-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* site-btn sb-dark */
+  .site-btn.sb-dark {
+    color: #ffffff;
+    display: inline-block;
+    padding: 16px 40px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .site-btn.sb-dark:after,
+  .site-btn.sb-dark:before {
+    background: #ffffff;
+  }
+
+  /* =======================
+   RESPONSIVE BREAKPOINTS
+======================= */
+
+  /* ----------- Large Screens (1477px and down) ----------- */
+  @media (max-width: 1477px) {
+    .intro-section {
+      padding: 100px 0;
+    }
+    .sp-title {
+      font-size: 55px;
+    }
+  }
+
+  /* ----------- Medium-Large Screens (1400px and down) ----------- */
+  @media (max-width: 1400px) {
+    .sp-title {
+      font-size: 50px;
+    }
+    .intro-text p {
+      font-size: 17px;
+    }
+  }
+
+  /* ----------- Laptops / Small Desktops (992px–1199px) ----------- */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .intro-section {
+      padding: 80px 0;
+    }
+    .sp-title {
+      font-size: 45px;
+    }
+    .intro-text p {
+      margin-bottom: 40px;
+      font-size: 16px;
+    }
+  }
+
+  /* ----------- Tablets (768px–991px) ----------- */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .intro-section {
+      padding: 70px 20px;
+    }
+    .sp-title {
+      font-size: 38px;
+      margin-bottom: 30px;
+    }
+    .intro-text p {
+      font-size: 16px;
+      margin-bottom: 35px;
+    }
+    .intro-section .col-lg-5 {
+      margin-top: 40px;
+    }
+  }
+
+  /* ----------- Mobile (max-width: 767px) ----------- */
+  @media (max-width: 767px) {
+    .intro-section {
+      padding: 60px 20px;
+    }
+
+    .intro-text {
+      text-align: center;
+    }
+
+    .sp-title {
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
+
+    .intro-text p {
+      font-size: 15px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .sp-title span {
+      padding: 0 8px;
+    }
+
+    .site-btn {
+      padding: 14px 30px;
+      font-size: 14px;
+    }
+
+    .intro-section .col-lg-5 {
+      margin-top: 40px;
+      padding-top: 0 !important;
+    }
+  }
+
+  /* ----------- Small Mobile (max-width: 479px) ----------- */
+  @media (max-width: 479px) {
+    .intro-section {
+      padding: 50px 15px;
+    }
+
+    .sp-title {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .intro-text p {
+      font-size: 14px;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+
+    .site-btn {
+      padding: 12px 25px;
+      font-size: 13px;
+      min-width: auto;
+    }
+
+    .sp-title span {
+      padding: 0 6px;
+    }
+  }
+
+  /* ----------- Extra Small Mobile (max-width: 360px) ----------- */
+  @media (max-width: 360px) {
+    .intro-section {
+      padding: 40px 10px;
+    }
+
+    .sp-title {
+      font-size: 24px;
+    }
+
+    .intro-text p {
+      font-size: 13px;
+    }
+
+    .site-btn {
+      padding: 10px 20px;
+      font-size: 12px;
+    }
+  }
+  .sp-title {
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+  .intro-text p {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+  .sp-title span {
+    padding: 0 8px;
+  }
+}
+
+/* ----------- Small Mobile (max-width: 479px) ----------- */
+@media (max-width: 479px) {
+  .intro-section {
+    padding: 50px 15px;
+  }
+  .sp-title {
+    font-size: 26px;
+  }
+  .intro-text p {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+  .site-btn {
+    min-width: 160px;
+    padding: 14px 0;
+    font-size: 13px;
+  }
+}
