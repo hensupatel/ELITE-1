@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./About.css";
-import cta from "../../../assets/img/cta-img.jpg";
+import cta from "../../../assets/img/ctaimg.jpg";
 import member1 from "../../../assets/img/team/1.png";
 import member2 from "../../../assets/img/team/2.png";
 import member3 from "../../../assets/img/team/3.png";
