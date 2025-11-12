@@ -16,7 +16,7 @@ import {
   PromoSection,
   TeamSection,
   TestimonialsSection,
-} from "./components/Routepages/About us/About.jsx";
+} from "./components/Routepages/Aboutus/About.jsx";
 
 // Services Page Sections
 import {
