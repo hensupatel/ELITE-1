@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./careerPage.css";
+import "./careerpage.css";
 import bg from "../../../assets/img/header-bg-2.jpg";
 import { motion } from "framer-motion";
 
