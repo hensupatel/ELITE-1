@@ -3,7 +3,7 @@ import "./CTA.css";
 import img1 from "../../../assets/img/icon/color/1.png";
 import img2 from "../../../assets/img/icon/light/2.png";
 import img3 from "../../../assets/img/icon/light/3.png";
-import cta from "../../../assets/img/cta-img.jpg";
+import cta from "../../../assets/img/ctaimg.jpg";
 
 const CTA = () => {
   return (
