@@ -1,13 +1,28 @@
-/* Milestones section styles */
+/* =======================
+   MILESTONES SECTION STYLES
+======================= */
+
+.milestones-section {
+  padding: 160px 0 80px;
+  background: #fff;
+}
+
 .milestone {
   min-height: 110px;
   padding-left: 43px;
   padding-top: 15px;
   position: relative;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
 }
-.milestones-section {
-  padding-top: 160px;
+
+.milestone::before {
+  content: "";
+  display: table;
+  clear: both;
 }
+
 .milestone h2 {
   margin-bottom: 0;
   font-size: 68px;
@@ -15,283 +30,13 @@
   float: left;
   position: relative;
   z-index: 1;
+  font-weight: 700;
+  color: #222222;
+  line-height: 1;
+  transition: color 0.3s ease;
 }
 
 .milestone p {
-  /* =======================
-   MILESTONES SECTION STYLES
-======================= */
-
-  .milestones-section {
-    padding-top: 160px;
-    padding-bottom: 80px;
-  }
-
-  .milestone {
-    min-height: 110px;
-    padding-left: 43px;
-    padding-top: 15px;
-    position: relative;
-    margin-bottom: 30px;
-    transition: transform 0.3s ease;
-  }
-
-  .milestone h2 {
-    margin-bottom: 0;
-    font-size: 68px;
-    display: inline-block;
-    float: left;
-    position: relative;
-    z-index: 1;
-    font-weight: 700;
-    color: #222222;
-    line-height: 1;
-  }
-
-  .milestone p {
-    float: left;
-    font-size: 20px;
-    margin-top: 10px;
-    margin-left: 10px;
-    line-height: 1.5;
-    position: relative;
-    z-index: 1;
-    font-weight: 500;
-    color: #333;
-  }
-
-  .milestone::after {
-    position: absolute;
-    content: "";
-    width: 110px;
-    height: 110px;
-    left: 6px;
-    top: 0;
-    background: #efefef;
-    transition: all 0.3s;
-    border-radius: 5px;
-  }
-
-  /* Hover Effects */
-  .milestone:hover {
-    transform: translateY(-3px);
-  }
-
-  .milestone:hover::after {
-    background: #569dff;
-  }
-
-  /* =======================
-   RESPONSIVE BREAKPOINTS
-======================= */
-
-  /* ----------- Large Screens (1400px and down) ----------- */
-  @media (max-width: 1400px) {
-    .milestones-section {
-      padding-top: 140px;
-    }
-
-    .milestone h2 {
-      font-size: 62px;
-    }
-
-    .milestone p {
-      font-size: 19px;
-    }
-
-    .milestone::after {
-      width: 105px;
-      height: 105px;
-    }
-  }
-
-  /* ----------- Medium-Large Screens (1200px and down) ----------- */
-  @media (max-width: 1199px) {
-    .milestones-section {
-      padding-top: 120px;
-      padding-bottom: 60px;
-    }
-
-    .milestone {
-      min-height: 100px;
-      padding-left: 38px;
-    }
-
-    .milestone h2 {
-      font-size: 56px;
-    }
-
-    .milestone p {
-      font-size: 18px;
-      margin-left: 8px;
-    }
-
-    .milestone::after {
-      width: 100px;
-      height: 100px;
-    }
-  }
-
-  /* ----------- Tablets (768px–991px) ----------- */
-  @media (min-width: 768px) and (max-width: 991px) {
-    .milestones-section {
-      padding-top: 100px;
-      padding-bottom: 50px;
-    }
-
-    .milestone {
-      min-height: 90px;
-      padding-left: 35px;
-      padding-top: 12px;
-      margin-bottom: 35px;
-    }
-
-    .milestone h2 {
-      font-size: 48px;
-    }
-
-    .milestone p {
-      font-size: 16px;
-      margin-top: 8px;
-      margin-left: 8px;
-    }
-
-    .milestone::after {
-      width: 90px;
-      height: 90px;
-      left: 5px;
-    }
-
-    /* Two columns on tablets */
-    .milestones-section .row .col-lg-3 {
-      flex: 0 0 50%;
-      max-width: 50%;
-    }
-  }
-
-  /* ----------- Mobile (max-width: 767px) ----------- */
-  @media (max-width: 767px) {
-    .milestones-section {
-      padding-top: 80px;
-      padding-bottom: 40px;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-
-    .milestone {
-      min-height: 80px;
-      padding-left: 30px;
-      padding-top: 10px;
-      margin-bottom: 30px;
-      text-align: left;
-    }
-
-    .milestone h2 {
-      font-size: 42px;
-    }
-
-    .milestone p {
-      font-size: 15px;
-      margin-top: 6px;
-      margin-left: 6px;
-      line-height: 1.4;
-    }
-
-    .milestone::after {
-      width: 80px;
-      height: 80px;
-      left: 4px;
-    }
-
-    /* Two columns on mobile landscape */
-    .milestones-section .row .col-lg-3 {
-      flex: 0 0 50%;
-      max-width: 50%;
-    }
-  }
-
-  /* ----------- Small Mobile (max-width: 479px) ----------- */
-  @media (max-width: 479px) {
-    .milestones-section {
-      padding-top: 60px;
-      padding-bottom: 30px;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-
-    .milestone {
-      min-height: 75px;
-      padding-left: 25px;
-      padding-top: 8px;
-      margin-bottom: 25px;
-    }
-
-    .milestone h2 {
-      font-size: 36px;
-    }
-
-    .milestone p {
-      font-size: 14px;
-      margin-top: 5px;
-      margin-left: 5px;
-    }
-
-    .milestone::after {
-      width: 75px;
-      height: 75px;
-      left: 3px;
-    }
-
-    /* Single column on small mobile */
-    .milestones-section .row .col-lg-3 {
-      flex: 0 0 100%;
-      max-width: 100%;
-    }
-  }
-
-  /* ----------- Extra Small Mobile (max-width: 360px) ----------- */
-  @media (max-width: 360px) {
-    .milestones-section {
-      padding-top: 50px;
-      padding-bottom: 25px;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-
-    .milestone {
-      min-height: 70px;
-      padding-left: 22px;
-      padding-top: 7px;
-      margin-bottom: 20px;
-    }
-
-    .milestone h2 {
-      font-size: 32px;
-    }
-
-    .milestone p {
-      font-size: 13px;
-      margin-top: 4px;
-      margin-left: 4px;
-    }
-
-    .milestone::after {
-      width: 70px;
-      height: 70px;
-      left: 2px;
-    }
-  }
-
-  /* ----------- Clear floats ----------- */
-  .milestone::before {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  .milestone {
-    overflow: hidden;
-  }
   float: left;
   font-size: 20px;
   margin-top: 10px;
@@ -300,9 +45,11 @@
   position: relative;
   z-index: 1;
   font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease;
 }
 
-.milestone:after {
+.milestone::after {
   position: absolute;
   content: "";
   width: 110px;
@@ -310,9 +57,234 @@
   left: 6px;
   top: 0;
   background: #efefef;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  z-index: 0;
 }
 
-.milestone:hover:after {
+/* Hover Effects */
+.milestone:hover {
+  transform: translateY(-3px);
+}
+
+.milestone:hover::after {
   background: #569dff;
+}
+
+.milestone:hover h2,
+.milestone:hover p {
+  color: #000000;
+}
+
+/* =======================
+   RESPONSIVE BREAKPOINTS
+======================= */
+
+/* ----------- Large Screens (1400px and down) ----------- */
+@media (max-width: 1400px) {
+  .milestones-section {
+    padding: 140px 0 70px;
+  }
+
+  .milestone h2 {
+    font-size: 62px;
+  }
+
+  .milestone p {
+    font-size: 19px;
+  }
+
+  .milestone::after {
+    width: 105px;
+    height: 105px;
+  }
+}
+
+/* ----------- Medium-Large Screens (1200px and down) ----------- */
+@media (max-width: 1199px) {
+  .milestones-section {
+    padding: 120px 0 60px;
+  }
+
+  .milestone {
+    min-height: 100px;
+    padding-left: 38px;
+  }
+
+  .milestone h2 {
+    font-size: 56px;
+  }
+
+  .milestone p {
+    font-size: 18px;
+    margin-left: 8px;
+  }
+
+  .milestone::after {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* ----------- Tablets (768px–991px) ----------- */
+@media (min-width: 768px) and (max-width: 991px) {
+  .milestones-section {
+    padding: 100px 0 50px;
+  }
+
+  .milestone {
+    min-height: 90px;
+    padding-left: 35px;
+    padding-top: 12px;
+    margin-bottom: 35px;
+  }
+
+  .milestone h2 {
+    font-size: 48px;
+  }
+
+  .milestone p {
+    font-size: 16px;
+    margin-top: 8px;
+    margin-left: 8px;
+  }
+
+  .milestone::after {
+    width: 90px;
+    height: 90px;
+    left: 5px;
+  }
+
+  /* Two columns on tablets */
+  .milestones-section .row .col-lg-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* ----------- Mobile (max-width: 767px) ----------- */
+@media (max-width: 767px) {
+  .milestones-section {
+    padding: 80px 20px 40px;
+  }
+
+  .milestone {
+    min-height: 80px;
+    padding-left: 30px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .milestone h2 {
+    font-size: 42px;
+  }
+
+  .milestone p {
+    font-size: 15px;
+    margin-top: 6px;
+    margin-left: 6px;
+    line-height: 1.4;
+  }
+
+  .milestone::after {
+    width: 80px;
+    height: 80px;
+    left: 4px;
+  }
+
+  /* Two columns on mobile landscape */
+  .milestones-section .row .col-lg-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* ----------- Small Mobile (max-width: 479px) ----------- */
+@media (max-width: 479px) {
+  .milestones-section {
+    padding: 60px 15px 30px;
+  }
+
+  .milestone {
+    min-height: 75px;
+    padding-left: 25px;
+    padding-top: 8px;
+    margin-bottom: 25px;
+  }
+
+  .milestone h2 {
+    font-size: 36px;
+  }
+
+  .milestone p {
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+
+  .milestone::after {
+    width: 75px;
+    height: 75px;
+    left: 3px;
+  }
+
+  /* Single column on small mobile */
+  .milestones-section .row .col-lg-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* ----------- Extra Small Mobile (max-width: 360px) ----------- */
+@media (max-width: 360px) {
+  .milestones-section {
+    padding: 50px 10px 25px;
+  }
+
+  .milestone {
+    min-height: 70px;
+    padding-left: 22px;
+    padding-top: 7px;
+    margin-bottom: 20px;
+  }
+
+  .milestone h2 {
+    font-size: 32px;
+  }
+
+  .milestone p {
+    font-size: 13px;
+    margin-top: 4px;
+    margin-left: 4px;
+  }
+
+  .milestone::after {
+    width: 70px;
+    height: 70px;
+    left: 2px;
+  }
+}
+
+/* =======================
+   ACCESSIBILITY
+======================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .milestone,
+  .milestone::after,
+  .milestone h2,
+  .milestone p {
+    transition: none;
+  }
+}
+
+/* =======================
+   CLEARFIX
+======================= */
+
+.milestones-section .row::after {
+  content: "";
+  display: table;
+  clear: both;
 }

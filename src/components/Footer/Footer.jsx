@@ -1,9 +1,11 @@
 import React from "react";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="footer-section">
+      {/* Social Links */}
       <div className="footer-social">
         <div className="social-links">
           <a href="#">
@@ -24,36 +26,40 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Footer Navigation */}
       <div className="container">
         <div className="row">
           <div className="col-lg-9 offset-lg-3">
             <div className="row">
+              {/* Column 1 */}
               <div className="col-md-4">
                 <div className="footer-item">
                   <ul>
                     <li>
-                      <a href="#">Home</a>
+                      <Link to="/">Home</Link>
                     </li>
                     <li>
-                      <a href="#">About us</a>
+                      <Link to="/about">About us</Link>
                     </li>
                     <li>
-                      <a href="#">Services</a>
+                      <Link to="/service">Services</Link>
                     </li>
                     <li>
-                      <a href="#">Portfolio</a>
+                      <Link to="/portfolio">Portfolio</Link>
                     </li>
                     <li>
-                      <a href="#">Blog</a>
+                      <Link to="/career">Career</Link>
                     </li>
                   </ul>
                 </div>
               </div>
+
+              {/* Column 2 */}
               <div className="col-md-4">
                 <div className="footer-item">
                   <ul>
                     <li>
-                      <a href="#">Terms & Conditions</a>
+                      <Link to="/contact">Contact us</Link>
                     </li>
                     <li>
                       <a href="#">FAQ</a>
@@ -62,7 +68,7 @@ const Footer = () => {
                       <a href="#">Help Desk</a>
                     </li>
                     <li>
-                      <a href="#">Job Aplications</a>
+                      <a href="#">Job Applications</a>
                     </li>
                     <li>
                       <a href="#">Site Map</a>
@@ -70,6 +76,8 @@ const Footer = () => {
                   </ul>
                 </div>
               </div>
+
+              {/* Column 3 */}
               <div className="col-md-4">
                 <div className="footer-item">
                   <ul>
@@ -77,7 +85,7 @@ const Footer = () => {
                       <a href="#">Privacy</a>
                     </li>
                     <li>
-                      <a href="#">Contact us</a>
+                      <a href="#">Terms & Conditions</a>
                     </li>
                     <li>
                       <a href="#">Newsletter</a>

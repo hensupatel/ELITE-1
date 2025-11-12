@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./CareerPage.css";
-// --- DUMMY DATA ---
-// In a real app, you'd fetch this from an API
+import bg from "../../../assets/img/header-bg-2.jpg";
+import { motion } from "framer-motion";
+
 const jobOpenings = [
   {
     id: 1,
@@ -19,14 +20,7 @@ const jobOpenings = [
     description:
       "Join our engineering team to design and analyze structural components for residential and industrial projects. PE license required.",
   },
-  {
-    id: 3,
-    title: "Construction Intern (Summer 2026)",
-    location: "Miami, FL",
-    type: "Internship",
-    description:
-      "A great opportunity for a civil engineering or construction management student to gain hands-on field experience.",
-  },
+
   {
     id: 4,
     title: "Field Superintendent",
@@ -199,18 +193,19 @@ const CareerPage = () => {
   return (
     <>
       {/* --- Page Header --- */}
-      <section className="page-header-section">
-        <img
-          src="https://placehold.co/1920x400/334155/e2e8f0?text=Join+Our+Team"
-          alt="Careers Header"
-          className="header-bg-img"
-        />
+      <motion.section
+        className="page-header-section"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <img src={bg} alt="Header background" className="header-bg" />
         <div className="container69">
           <h1 className="header-title69">
             Careers<span>.</span>
           </h1>
         </div>
-      </section>
+      </motion.section>
 
       {/* --- Job List --- */}
       <section className="job-list-section">

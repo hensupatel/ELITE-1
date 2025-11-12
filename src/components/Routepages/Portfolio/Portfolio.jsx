@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Portfolio.css";
 import bg from "../../../assets/img/bg.jpg";
+import { motion } from "framer-motion";
 // --- Commercial Projects ---
 import com1 from "../../../assets/EILAT IMG/Commercial projects/1.jpg";
 import com2 from "../../../assets/EILAT IMG/Commercial projects/img-3.jpg";
@@ -161,14 +162,19 @@ export default function Portfolio() {
 
   return (
     <>
-      <section className="page-header-section">
+      <motion.section
+        className="page-header-section"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
         <img src={bg} alt="" />
         <div className="container69">
           <h1 className="header-title69">
             Portfolio<span>.</span>
           </h1>
         </div>
-      </section>
+      </motion.section>
       <div className="portfolio-container">
         <div className="container">
           <header className="portfolio-header">

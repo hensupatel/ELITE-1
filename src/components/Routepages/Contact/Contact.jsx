@@ -1,19 +1,25 @@
 import React from "react";
 import "./Contact.css";
-import bg from "../../../assets/img/header-bg-2.jpg"; // adjust path
+import bg from "../../../assets/img/header-bg-2.jpg";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
     <>
       {/* Page Header Section */}
-      <section className="page-header-section">
+      <motion.section
+        className="page-header-section"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
         <img src={bg} alt="Header background" className="header-bg" />
         <div className="container">
           <h1 className="header-title69">
             Contact<span>.</span>
           </h1>
         </div>
-      </section>
+      </motion.section>
 
       {/* Contact Section */}
       <section className="contact-section">

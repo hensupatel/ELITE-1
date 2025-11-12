@@ -199,6 +199,7 @@
   .cta-section .cta-content h2 {
     font-size: 38px;
     margin-bottom: 20px;
+    color: #000;
   }
 
   .cta-section .cta-content p {
@@ -222,6 +223,7 @@
   .cta-section {
     min-height: auto;
     margin-bottom: 50px;
+    display: none;
   }
 
   .cta-section::after {
@@ -253,6 +255,7 @@
   .cta-section .cta-content h2 {
     font-size: 32px;
     margin-bottom: 20px;
+    color: #000;
   }
 
   .cta-section .cta-content h2 span {
@@ -281,6 +284,7 @@
 @media (max-width: 479px) {
   .cta-section {
     margin-bottom: 40px;
+    display: none;
   }
 
   .cta-section::after {
@@ -303,6 +307,7 @@
   .cta-section .cta-content h2 {
     font-size: 28px;
     margin-bottom: 18px;
+    color: #000;
   }
 
   .cta-section .cta-content h2 span {
@@ -329,6 +334,7 @@
 @media (max-width: 360px) {
   .cta-section {
     margin-bottom: 30px;
+    display: none;
   }
 
   .cta-section::after {
@@ -350,6 +356,7 @@
   .cta-section .cta-content h2 {
     font-size: 24px;
     margin-bottom: 15px;
+    color: #000;
   }
 
   .cta-section .cta-content p {
@@ -366,4 +373,11 @@
     height: 45px;
     width: 30px;
   }
+}
+.cta-img-icon img {
+  transition: transform 0.2s ease;
+}
+
+.cta-img-icon:hover img {
+  transform: scale(1);
 }

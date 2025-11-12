@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
+import { motion } from "framer-motion"; // ✅ Added Framer Motion
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "./Servicepage.css";
@@ -9,6 +10,7 @@ import img1 from "../../../assets/img/service/1.jpg";
 import img2 from "../../../assets/img/service/2.jpg";
 import img3 from "../../../assets/img/service/3.jpg";
 import bgImage from "../../../assets/img/service-bg.jpg";
+
 const services = [
   {
     id: 1,
@@ -18,7 +20,7 @@ const services = [
   {
     id: 2,
     title: "02. Building Trust, Delivering Quality.",
-    desc: "Nunc dapibus, libero ut pulvinar accumsan, tortor nisl iaculis ligula. Integer lorem risus, feugiat at mauris malesuadaFrom concept to completion, we focus on transparency, reliability, and superior results that exceed client expectations every time.",
+    desc: "From concept to completion, we focus on transparency, reliability, and superior results that exceed client expectations every time.",
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ const services = [
     desc: "Blending creativity with engineering excellence, we deliver modern spaces that are both functional and built to stand the test of time.",
   },
 ];
+
 const serviceData = [
   {
     number: "01.",
@@ -49,19 +52,39 @@ const IntroSection = () => {
 
   return (
     <>
-      <section className="page-header-section">
+      {/* 🏁 Page Header Animation */}
+      <motion.section
+        className="page-header-section"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
         <img src={bg} alt="" />
         <div className="container69">
           <h1 className="header-title69">
             Services<span>.</span>
           </h1>
         </div>
-      </section>
-      <section className="intro-section spad">
+      </motion.section>
+
+      {/* 💼 Intro Section */}
+      <motion.section
+        className="intro-section spad"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 1 }}
+      >
         <div className="container">
           <div className="row">
             {/* Left side Swiper */}
-            <div className="col-lg-5">
+            <motion.div
+              className="col-lg-5"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+            >
               <div className="service-slider">
                 <Swiper
                   modules={[Autoplay, EffectFade]}
@@ -79,50 +102,72 @@ const IntroSection = () => {
                   ))}
                 </Swiper>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Right side content */}
-            <div className="col-lg-7 service-text">
+            {/* Right side text */}
+            <motion.div
+              className="col-lg-7 service-text"
+              initial={{ opacity: 0, x: 80 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
               <h1>
                 We offer top quality project <span>services</span>
               </h1>
 
               {services.map((service, index) => (
-                <div
+                <motion.div
                   key={service.id}
                   className="service-item"
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
                 >
                   <h2>{service.title}</h2>
                   <p className={hoveredIndex === index ? "show" : ""}>
                     {service.desc}
                   </p>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 };
 
 const ServiceBoxSection = () => {
   return (
-    <section className="steps-section">
+    <motion.section
+      className="steps-section"
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 1 }}
+    >
       <img src={bgImage} alt="" />
       <div className="steps-container">
         {serviceData.map((step, index) => (
-          <div className="step-card" key={index}>
+          <motion.div
+            className="step-card"
+            key={index}
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: index * 0.2 }}
+          >
             <h2 className="step-number">{step.number}</h2>
             <h3 className="step-title">{step.title}</h3>
             <p className="step-text">{step.desc}</p>
-            <a href="#" className="read-more"></a>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,7 +1,9 @@
 /* =======================
    PAGE HEADER SECTION
 ======================= */
-
+.col-lg-2col-md-3 {
+  align-items: center;
+}
 .page-header-section {
   height: 395px;
   background-size: cover;

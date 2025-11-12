@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Services.css";
 import img1 from "../../../assets/img/icon/dark/1.png";
 import img2 from "../../../assets/img/icon/dark/2.png";
@@ -6,6 +6,7 @@ import img3 from "../../../assets/img/icon/dark/3.png";
 import img4 from "../../../assets/img/icon/dark/4.png";
 import img5 from "../../../assets/img/icon/dark/5.png";
 import img6 from "../../../assets/img/icon/dark/6.png";
+import AOS from "aos";
 const services = [
   {
     img: img1,
@@ -40,6 +41,9 @@ const services = [
 ];
 
 const Services = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true, offset: 100 });
+  }, []);
   return (
     <section className="service-section spad">
       <div className="container">

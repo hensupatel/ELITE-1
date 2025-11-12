@@ -1,34 +1,92 @@
+/* =======================
+   HEADER BASE STYLES
+======================= */
+
 .header-area {
-  position: absolute;
+  position: absolute; /* ✅ Fixed instead of absolute */
   width: 100%;
   top: 0;
-  z-index: 50;
+  left: 0;
+  z-index: 1000; /* ✅ Keeps it above all elements */
+  /* ✅ Ensures visibility across pages */
+  transition: all 0.3s ease;
 }
+
+.header-area::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* =======================
+   LOGO AREA
+======================= */
 
 .logo-area {
   float: left;
   display: inline-block;
   background: #121212;
-  padding: 20px 60px 30px;
+  height: 96px;
+  width: 207px;
+  position: relative;
+  padding: 0;
+  transition: all 0.3s ease;
 }
+
+.logo-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 15px 25px;
+}
+
+/* =======================
+   PHONE NUMBER
+======================= */
 
 .phone-number {
   float: right;
   display: inline-block;
-  padding: 5px 10px;
+  padding: 8px 18px;
   background: #569dff;
   font-weight: 700;
   letter-spacing: 1px;
   margin-top: 30px;
   margin-right: 50px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
 }
+
+.phone-number:hover {
+  background: #3a8dff;
+  transform: translateY(-2px);
+}
+
+/* =======================
+   MOBILE MENU TOGGLE
+======================= */
 
 .nav-switch {
   display: none;
   color: white;
-  font-size: 24px;
+  font-size: 28px;
   cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  z-index: 101;
+  transition: all 0.3s ease;
 }
+
+.nav-switch:hover {
+  color: #569dff;
+}
+
+/* =======================
+   NAVIGATION MENU
+======================= */
 
 .nav-menu {
   display: inline-block;
@@ -42,7 +100,8 @@
 }
 
 .nav-menu ul li {
-  display: inline;
+  display: inline-block;
+  position: relative;
 }
 
 .nav-menu ul li a {
@@ -55,233 +114,88 @@
   font-weight: 500;
   position: relative;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
+/* Top line indicator */
 .nav-menu ul li a::after {
   position: absolute;
   content: "";
   width: 2px;
   height: 0;
   left: 50%;
-  margin-left: 1px;
+  margin-left: -1px;
   top: 0;
   background: #569dff;
-  transition: all 0.4s;
+  transition: all 0.4s ease;
+}
+
+.nav-menu ul li a:hover {
+  color: #569dff;
 }
 
 .nav-menu ul li a:hover::after {
   height: 25px;
 }
 
-.nav-menu ul li.active > a::after {
+/* Active page styling */
+.nav-menu ul li a.active {
+  color: #569dff;
+}
+
+.nav-menu ul li a.active::after {
   height: 25px;
 }
 
-/* Optional: Responsive behavior */
-@media (max-width: 768px) {
-  .nav-switch {
-    display: block;
-    margin-left: 333px;
-    margin-top: 10px;
-  }
+/* =======================
+   RESPONSIVE BREAKPOINTS
+======================= */
 
-  .nav-menu {
-    display: none;
-  }
-}
-.logo-area {
-  height: 96px;
-  width: 207px;
-  position: relative;
-  padding-left: 25px;
-  padding-right: 25px;
-  justify-items: center;
-}
-.logo-area img {
-  object-fit: cover;
-  position: absolute;
-  top: -0;
-  left: 0;
-}
-/* ========== Base Header Styles ========== */
-.header-area {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  z-index: 50;
-}
-
-.logo-area {
-  float: left;
-  display: inline-block;
-  background: #121212;
-  padding: 20px 60px 30px;
-  height: 96px;
-  width: 207px;
-  position: relative;
-  padding-left: 25px;
-  padding-right: 25px;
-  justify-items: center;
-}
-
-.logo-area img {
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.phone-number {
-  float: right;
-  display: inline-block;
-  padding: 5px 10px;
-  background: #569dff;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-top: 30px;
-  margin-right: 50px;
-}
-
-.nav-switch {
-  display: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.nav-menu {
-  display: inline-block;
-  float: right;
-}
-
-.nav-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-menu ul li {
-  display: inline;
-}
-
-.nav-menu ul li a {
-  display: inline-block;
-  padding: 40px 10px 5px;
-  text-transform: uppercase;
-  margin-right: 30px;
-  font-size: 14px;
-  color: #fff;
-  font-weight: 500;
-  position: relative;
-  text-decoration: none;
-}
-
-.nav-menu ul li a::after {
-  position: absolute;
-  content: "";
-  width: 2px;
-  height: 0;
-  left: 50%;
-  margin-left: 1px;
-  top: 0;
-  background: #569dff;
-  transition: all 0.4s;
-}
-
-.nav-menu ul li a:hover::after,
-.nav-menu ul li.active > a::after {
-  height: 25px;
-}
-
-/* ========== Responsive Breakpoints ========== */
-
-/* --- Extra Large Screens (max-width: 1477px) --- */
-@media only screen and (max-width: 1477px) {
-  .phone-number {
-    margin-right: 30px;
-  }
-}
-
-/* --- Large Screens (max-width: 1400px) --- */
-@media only screen and (max-width: 1400px) {
-  .nav-menu ul li a {
-    margin-right: 20px;
-  }
-}
-
-/* --- Medium Screens (992px–1199px) --- */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .phone-number {
-    font-size: 14px;
-    margin-right: 30px;
-  }
-
-  .nav-menu ul li a {
-    margin-right: 20px;
-    font-size: 13px;
-  }
-
-  .logo-area {
-    padding: 20px 40px;
-  }
-}
-
-/* --- Tablets (768px–991px) --- */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .logo-area {
-    padding: 15px 35px 25px;
-    width: 180px;
-  }
-
-  .nav-menu ul li a {
-    margin-right: 10px;
-    font-size: 12px;
-    padding: 30px 5px 5px;
-  }
-
-  .phone-number {
-    font-size: 12px;
-    padding: 5px 8px;
-    margin-right: 20px;
-  }
-
-  .nav-switch {
-    display: none;
-  }
-}
-
-/* --- Large Mobile (max-width: 767px) --- */
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .header-area {
     background: #121212;
-    position: relative;
-    padding: 0 15px;
+    height: 80px;
   }
 
   .logo-area {
-    padding: 20px 30px;
-    width: 180px;
+    width: 170px;
+    height: 80px;
+    float: none;
+    display: block;
   }
 
   .nav-switch {
     display: block;
-    position: absolute;
-    right: 20px;
     top: 25px;
-    font-size: 30px;
-    color: #fff;
-    cursor: pointer;
+    left: 350px;
+  }
+
+  .phone-number {
+    display: none;
   }
 
   .nav-menu {
-    position: absolute;
-    width: calc(100% - 60px);
-    left: 30px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 80px;
     background: #121212;
-    top: 100%;
     display: none;
-    border-top: 2px solid #569dff;
+    border-top: 3px solid #569dff;
     z-index: 100;
+    float: none;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-menu.active {
+    display: block;
+    animation: slideDown 0.4s ease forwards;
+  }
+
+  .nav-menu ul {
+    padding: 10px 0;
   }
 
   .nav-menu ul li {
@@ -290,52 +204,53 @@
 
   .nav-menu ul li a {
     display: block;
-    padding: 15px 20px;
+    padding: 16px 30px;
     margin-right: 0;
-    border-bottom: 1px solid #202020;
+    border-bottom: 1px solid #1f1f1f;
     font-size: 14px;
+    transition: all 0.3s ease;
   }
 
-  .phone-number {
+  .nav-menu ul li a::after {
     display: none;
   }
-}
 
-/* --- Small Mobile (max-width: 479px) --- */
-@media only screen and (max-width: 479px) {
-  .logo-area {
-    width: 160px;
-    padding: 15px 20px;
-  }
-
-  .nav-switch {
-    right: 15px;
-    top: 20px;
-    font-size: 28px;
-  }
-
-  .nav-menu {
-    width: 100%;
+  .nav-menu ul li a::before {
+    content: "";
+    position: absolute;
     left: 0;
-    border-top: 2px solid #569dff;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 60%;
+    background: #569dff;
+    transition: all 0.3s ease;
   }
 
-  .nav-menu ul li a {
-    font-size: 13px;
-    padding: 14px 18px;
+  .nav-menu ul li a:hover,
+  .nav-menu ul li a.active {
+    background: rgba(86, 157, 255, 0.1);
+    padding-left: 35px;
+  }
+
+  .nav-menu ul li a:hover::before,
+  .nav-menu ul li a.active::before {
+    width: 4px;
+  }
+
+  .nav-menu ul li:last-child a {
+    border-bottom: none;
   }
 }
-/* ===== Mobile Menu Active State ===== */
-.nav-menu.active {
-  display: block;
-  animation: slideDown 0.4s ease forwards;
-}
 
-/* Optional: Smooth dropdown animation */
+/* =======================
+   ANIMATIONS
+======================= */
+
 @keyframes slideDown {
   0% {
     opacity: 0;
-    transform: translateY(-15px);
+    transform: translateY(-20px);
   }
   100% {
     opacity: 1;
@@ -343,11 +258,30 @@
   }
 }
 
-/* Optional improvement for usability */
-.nav-menu ul li a {
-  transition: background 0.3s ease;
+/* =======================
+   SCROLLBAR STYLING (Mobile Menu)
+======================= */
+
+.nav-menu::-webkit-scrollbar {
+  width: 6px;
 }
 
-.nav-menu ul li a:hover {
-  background: rgba(86, 157, 255, 0.1);
+.nav-menu::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.nav-menu::-webkit-scrollbar-thumb {
+  background: #569dff;
+  border-radius: 3px;
+}
+
+.nav-menu::-webkit-scrollbar-thumb:hover {
+  background: #3a8dff;
+}
+
+/* =======================
+   PAGE CONTENT FIX
+======================= */
+.page-content {
+  padding-top: 100px; /* Prevent content hiding under header */
 }
