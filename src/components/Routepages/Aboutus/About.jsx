@@ -63,8 +63,14 @@ const IntroSection1 = () => (
             Building Trust, Crafting the <span>Future</span>
           </h1>
           <p>
-            Elite Construction was established in 2011, with roots tracing back
-            to 1981...
+            Elite Construction was established in 2011, with its roots tracing
+            back to 1981. With nearly four decades of experience, the company
+            has evolved into a fully integrated civil engineering enterprise.
+            Over the years, Elite Construction has successfully executed a wide
+            range of civil engineering projects, showcasing expertise,
+            commitment, and innovation. Guided by a strong foundation of
+            knowledge and craftsmanship, the company continues to deliver
+            quality, precision, and excellence across every endeavor..
           </p>
         </div>
         <motion.div
