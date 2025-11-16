@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 
 // Landing Page Sections
 import Hero from "./components/Lendingpage/Hero/Hero.jsx";
@@ -18,7 +18,7 @@ import {
   TestimonialsSection,
 } from "./components/Routepages/Aboutus/About.jsx";
 
-// Services Page Sections
+// Service Page Sections
 import {
   IntroSection,
   ServiceBoxSection,
@@ -27,23 +27,8 @@ import {
 import Portfolio from "./components/Routepages/Portfolio/Portfolio.jsx";
 import Contact from "./components/Routepages/Contact/Contact.jsx";
 import CareerPage from "./components/Routepages/Career/Careerpage.jsx";
-import Preloader from "./components/preloder/Preloader.jsx"; // ✅ Import preloader
 
 const AppRoutes = () => {
-  const [loading, setLoading] = useState(true);
-  const location = useLocation();
-
-  // Run this every time route (pathname) changes
-  useEffect(() => {
-    setLoading(true);
-    const timer = setTimeout(() => setLoading(false), 1000); // 1s loader
-    return () => clearTimeout(timer);
-  }, [location.pathname]);
-
-  if (loading) {
-    return <Preloader />; // ✅ Show preloader before loading page
-  }
-
   return (
     <Routes>
       {/* Home Page */}
@@ -76,7 +61,7 @@ const AppRoutes = () => {
         }
       />
 
-      {/* Service Page */}
+      {/* Services Page */}
       <Route
         path="/service"
         element={
@@ -112,14 +97,7 @@ const AppRoutes = () => {
       />
 
       {/* Contact Page */}
-      <Route
-        path="/contact"
-        element={
-          <>
-            <Contact />
-          </>
-        }
-      />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   );
 };
