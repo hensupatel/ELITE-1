@@ -3,7 +3,7 @@
 ======================= */
 .hero-section {
   height: 960px;
-  background: #3cedf0;
+  background: #03282900;
   position: relative;
 }
 
@@ -221,7 +221,9 @@
   .hero-slider .hero-slide-item {
     height: 850px;
   }
-  .hero-section { padding-top: 90px; }
+  .hero-section {
+    padding-top: 90px;
+  }
   .slide-num-holder {
     right: 20px;
   }
