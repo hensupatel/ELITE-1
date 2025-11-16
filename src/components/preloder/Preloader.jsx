@@ -5,16 +5,18 @@ const Preloader = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000); // ⏳ Preloader shows for 1.5 seconds
-    return () => clearTimeout(timer);
+    // Wait until FULL page load (images, fonts, etc.)
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        setLoading(false); // Delay for smooth fade-out
+      }, 500);
+    });
   }, []);
 
   return (
     <>
       {loading && (
-        <div className="preloader">
+        <div className="preloader fade-out">
           <div className="spinner"></div>
         </div>
       )}
