@@ -12,12 +12,17 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // When full website finishes loading (images, fonts, everything)
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        setLoading(false);
-      }, 600); // smooth fade delay
-    });
+    const onLoad = () => setTimeout(() => setLoading(false), 400);
+    if (document.readyState === "complete") {
+      onLoad();
+    } else {
+      window.addEventListener("load", onLoad);
+    }
+    const fallback = setTimeout(() => setLoading(false), 3000);
+    return () => {
+      window.removeEventListener("load", onLoad);
+      clearTimeout(fallback);
+    };
   }, []);
 
   return (
