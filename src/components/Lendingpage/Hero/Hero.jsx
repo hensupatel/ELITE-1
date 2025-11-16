@@ -8,10 +8,6 @@ import "aos/dist/aos.css";
 import vnbg from "../../../assets/VNbg.mp4";
 
 const Hero = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1200, once: true });
-  }, []);
-
   return (
     <section className="hero-section">
       <video autoPlay loop muted playsInline className="background-video">

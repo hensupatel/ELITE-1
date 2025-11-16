@@ -151,42 +151,40 @@
    RESPONSIVE BREAKPOINTS
 ======================= */
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .header-area {
-    background: #121212;
     height: 80px;
+    padding: 0 15px;
+    background-color: #121212;
   }
 
   .logo-area {
-    width: 170px;
     height: 80px;
-    float: none;
-    display: block;
-  }
-
-  .nav-switch {
-    display: block;
-    top: 25px;
-    left: 350px;
+    width: 180px;
+    background-color: #121212;
   }
 
   .phone-number {
     display: none;
   }
 
+  .nav-switch {
+    display: block;
+  }
+
+  /* MOBILE MENU */
   .nav-menu {
     position: fixed;
-    width: 100%;
-    left: 0;
     top: 80px;
+    left: 0;
+    width: 100%;
     background: #121212;
     display: none;
     border-top: 3px solid #569dff;
-    z-index: 100;
-    float: none;
     max-height: calc(100vh - 80px);
     overflow-y: auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding-bottom: 20px;
+    z-index: 999;
   }
 
   .nav-menu.active {
@@ -195,20 +193,21 @@
   }
 
   .nav-menu ul {
+    flex-direction: column;
+    width: 100%;
     padding: 10px 0;
+    gap: 0;
   }
 
   .nav-menu ul li {
-    display: block;
+    width: 100%;
   }
 
   .nav-menu ul li a {
     display: block;
-    padding: 16px 30px;
-    margin-right: 0;
+    padding: 16px 25px;
     border-bottom: 1px solid #1f1f1f;
-    font-size: 14px;
-    transition: all 0.3s ease;
+    font-size: 15px;
   }
 
   .nav-menu ul li a::after {
@@ -220,16 +219,16 @@
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translateY(-50%);
-    width: 0;
     height: 60%;
+    width: 0;
+    transform: translateY(-50%);
     background: #569dff;
     transition: all 0.3s ease;
   }
 
   .nav-menu ul li a:hover,
   .nav-menu ul li a.active {
-    background: rgba(86, 157, 255, 0.1);
+    background: rgba(86, 157, 255, 0.15);
     padding-left: 35px;
   }
 
@@ -237,37 +236,53 @@
   .nav-menu ul li a.active::before {
     width: 4px;
   }
+}
 
-  .nav-menu ul li:last-child a {
-    border-bottom: none;
+/* Support 320px — very small phones */
+@media (max-width: 360px) {
+  .header-area {
+    background-color: #121212;
+  }
+
+  .logo-area {
+    width: 150px;
+  }
+
+  .nav-switch {
+    font-size: 26px;
+  }
+
+  .nav-menu ul li a {
+    font-size: 14px;
+  }
+}
+
+/* Extra safety for very small phones like iPhone SE */
+@media (max-width: 300px) {
+  .logo-area {
+    width: 130px;
   }
 }
 
 /* =======================
    ANIMATIONS
 ======================= */
-
 @keyframes slideDown {
-  0% {
+  from {
     opacity: 0;
     transform: translateY(-20px);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
 /* =======================
-   SCROLLBAR STYLING (Mobile Menu)
+   SCROLLBAR
 ======================= */
-
 .nav-menu::-webkit-scrollbar {
   width: 6px;
-}
-
-.nav-menu::-webkit-scrollbar-track {
-  background: #1a1a1a;
 }
 
 .nav-menu::-webkit-scrollbar-thumb {
@@ -275,13 +290,14 @@
   border-radius: 3px;
 }
 
-.nav-menu::-webkit-scrollbar-thumb:hover {
-  background: #3a8dff;
-}
-
 /* =======================
    PAGE CONTENT FIX
 ======================= */
 .page-content {
-  padding-top: 100px; /* Prevent content hiding under header */
+  padding-top: 100px;
+}
+@media (max-width: 1024px) {
+  .phone-number {
+    display: none;
+  }
 }
