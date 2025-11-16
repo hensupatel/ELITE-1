@@ -11,7 +11,14 @@ import headerPoster from "../../../assets/img/header-bg.jpg";
 const Hero = () => {
   return (
     <section className="hero-section">
-      <video autoPlay loop muted playsInline preload="metadata" poster={headerPoster} className="background-video">
+      <video
+        autoPlay
+        loop
+        muted
+        preload="metadata"
+        poster={headerPoster}
+        className="background-video"
+      >
         <source src={vnbg} type="video/mp4" />
       </video>
       <div className="overlay"></div>
