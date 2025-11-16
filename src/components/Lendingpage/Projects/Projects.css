@@ -122,5 +122,9 @@
 
   .single-project {
     height: 400px;
+    width: 100%;
+  }
+  .projects-slider-container {
+    margin-left: 0;
   }
 }

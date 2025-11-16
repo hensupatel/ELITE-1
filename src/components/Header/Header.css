@@ -3,12 +3,11 @@
 ======================= */
 
 .header-area {
-  position: absolute; /* ✅ Fixed instead of absolute */
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1000; /* ✅ Keeps it above all elements */
-  /* ✅ Ensures visibility across pages */
+  z-index: 1000;
   transition: all 0.3s ease;
 }
 
@@ -190,6 +189,13 @@
   .nav-menu.active {
     display: block;
     animation: slideDown 0.4s ease forwards;
+  }
+
+  .nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 998;
   }
 
   .nav-menu ul {

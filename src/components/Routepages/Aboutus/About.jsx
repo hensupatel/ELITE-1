@@ -155,10 +155,10 @@ const TeamSection = () => {
         <div className="section-title">
           <h2>The Team</h2>
         </div>
-        <div className="row-1">
+        <div className="team-container">
           {team.map((m, i) => (
             <motion.div
-              className="col-lg-2 col-md-3"
+              className="team-member-item"
               key={i}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}

@@ -221,6 +221,7 @@
   .hero-slider .hero-slide-item {
     height: 850px;
   }
+  .hero-section { padding-top: 90px; }
   .slide-num-holder {
     right: 20px;
   }
@@ -256,9 +257,7 @@
   }
 
   .hero-right-text {
-    right: 80px;
-    bottom: 70%;
-    letter-spacing: 12px;
+    display: none;
   }
 
   .slide-num-holder {

@@ -21,6 +21,13 @@ const Header = () => {
     setMenuOpen(false);
   }, [location.pathname]);
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
   // Function to check if the current path matches the link
   const isActive = (path) => location.pathname === path;
 
@@ -32,9 +39,16 @@ const Header = () => {
       </Link>
 
       {/* Mobile Menu Icon */}
-      <div className="nav-switch" onClick={handleMenuToggle}>
+      <div
+        className="nav-switch"
+        onClick={handleMenuToggle}
+        role="button"
+        aria-expanded={menuOpen}
+        aria-controls="primary-navigation"
+      >
         <FaBars />
       </div>
+      {menuOpen && <div className="nav-overlay" onClick={closeMenu} />}
 
       {/* Contact Number */}
       <div className="phone-number">+91-0265-2255145</div>

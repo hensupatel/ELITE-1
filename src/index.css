@@ -17,6 +17,10 @@ body {
   background: #fff;
   overflow-x: hidden;
 }
+html,
+#root {
+  overflow-x: hidden;
+}
 
 /* ===== Containers ===== */
 .container {
@@ -417,8 +421,8 @@ a {
   }
 
   .row {
-    margin-left: -10px;
-    margin-right: -10px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   [class*="col-"] {
@@ -566,8 +570,8 @@ a {
   }
 
   .row {
-    margin-left: -5px;
-    margin-right: -5px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   [class*="col-"] {
