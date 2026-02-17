@@ -1,6 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
+// SEO Component
+import SEO from "./components/SEO.jsx";
+
 // Landing Page Sections
 import Hero from "./components/Lendingpage/Hero/Hero.jsx";
 import Intro from "./components/Lendingpage/Intro/Intro";
@@ -36,6 +39,11 @@ const AppRoutes = () => {
         path="/"
         element={
           <>
+            <SEO
+              title="Elite Construction – Your Trusted Construction Partner"
+              description="Gujarat's trusted construction company since 2011. Residential, commercial, corporate & industrial projects delivered with quality and precision."
+              path="/"
+            />
             <Hero />
             <Intro />
             <Services />
@@ -52,6 +60,11 @@ const AppRoutes = () => {
         path="/about"
         element={
           <>
+            <SEO
+              title="About Us – Elite Construction"
+              description="Discover Elite Construction's legacy since 2011, our expert team, and our dedication to delivering quality projects across Gujarat."
+              path="/about"
+            />
             <PageHeader />
             <IntroSection1 />
             <TestimonialsSection />
@@ -66,6 +79,11 @@ const AppRoutes = () => {
         path="/service"
         element={
           <>
+            <SEO
+              title="Our Services – Elite Construction"
+              description="From residential homes to industrial facilities, explore Elite Construction's comprehensive range of construction services."
+              path="/service"
+            />
             <IntroSection />
             <ServiceBoxSection />
             <Services />
@@ -79,6 +97,11 @@ const AppRoutes = () => {
         path="/portfolio"
         element={
           <>
+            <SEO
+              title="Portfolio – Elite Construction"
+              description="View our completed residential, commercial, corporate, and industrial construction projects across Gujarat."
+              path="/portfolio"
+            />
             <Portfolio />
             <PromoSection />
           </>
@@ -90,6 +113,11 @@ const AppRoutes = () => {
         path="/career"
         element={
           <>
+            <SEO
+              title="Careers – Elite Construction"
+              description="Join Elite Construction. Explore current openings and build your career with a trusted construction company."
+              path="/career"
+            />
             <CareerPage />
             <PromoSection />
           </>
@@ -97,7 +125,19 @@ const AppRoutes = () => {
       />
 
       {/* Contact Page */}
-      <Route path="/contact" element={<Contact />} />
+      <Route
+        path="/contact"
+        element={
+          <>
+            <SEO
+              title="Contact Us – Elite Construction"
+              description="Reach out to Elite Construction in Vadodara for project inquiries, quotes, and consultations."
+              path="/contact"
+            />
+            <Contact />
+          </>
+        }
+      />
     </Routes>
   );
 };
